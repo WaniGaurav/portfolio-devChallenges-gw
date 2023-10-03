@@ -18,17 +18,17 @@ btn.addEventListener('click', function(e) {
 // Dark mode
 let darkMode = ()=>{
     document.body.style.backgroundColor = "black";
-    // document.documentElement.style.setProperty("--clr-primary","#eee",);
-    // document.documentElement.style.setProperty("--clr-second","#eee");
-    // document.documentElement.style.setProperty("--clr-third","#310089");
+    document.documentElement.style.setProperty("--clr-primary","#eee",);
+    document.documentElement.style.setProperty("--clr-second","#eee");
+    document.documentElement.style.setProperty("--clr-third","#6914ad");
 }
 // Dark mode End
 
 // Light mode
 let lightMode = ()=>{
-    document.body.style.backgroundColor = "#fff";
-    // document.documentElement.style.setProperty("--clr-primary","#333333");
-    // document.documentElement.style.setProperty("--clr-second","#4F4F4F");
-    // document.documentElement.style.setProperty("--clr-third","#828282");
+    document.body.style.backgroundColor = "#e4ea8a";
+    document.documentElement.style.setProperty("--clr-primary","#4F4F4F");
+    document.documentElement.style.setProperty("--clr-second","#828282");
+    document.documentElement.style.setProperty("--clr-third","#333333");
 }
 // Light mode End
