@@ -21,6 +21,7 @@ let darkMode = ()=>{
     document.documentElement.style.setProperty("--clr-primary","#eee",);
     document.documentElement.style.setProperty("--clr-second","#eee");
     document.documentElement.style.setProperty("--clr-third","#6914ad");
+    document.documentElement.style.setProperty("--clr-skill-cart","#32008b");
 }
 // Dark mode End
 
@@ -30,5 +31,6 @@ let lightMode = ()=>{
     document.documentElement.style.setProperty("--clr-primary","#4F4F4F");
     document.documentElement.style.setProperty("--clr-second","#828282");
     document.documentElement.style.setProperty("--clr-third","#333333");
+    document.documentElement.style.setProperty("--clr-skill-cart","#d3f7f2");
 }
 // Light mode End
