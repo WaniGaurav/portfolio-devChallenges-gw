@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -260,9 +261,81 @@ section{
 
 /* Animates skill bar Ends*/
 
-/* .col-span-two{
-    grid-column: 1 / 3;
-} */
+/* Experience */
+
+.experience{
+    margin: 2rem 0;
+    width: 413px;
+    /* width: fit-content; */
+    height: fit-content;
+    display: grid;
+    /* border: 2px solid red; */
+    border-radius: 12px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    /* background-color:#e8ff00; */
+    background-color:#d3f7f2;
+    background-color:var(--clr-skill-cart);
+}
+.exp-heading{
+    margin: 1rem 1.5rem;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--clr-primary);
+}
+.exp-wrapper{
+    margin: 1rem 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* border: 1px solid darksalmon; */
+    border-radius: 12px;
+    box-shadow: 10px 10px 20px rgb(71, 95, 80);
+    /* gap: 1.3rem; */
+}
+.exp-wrapper:hover{
+    box-shadow: 0px 10px 20px rgb(225, 106, 2);
+
+}
+.exp-wrp-left{
+    place-self:start;
+    margin: 0.6rem 0.3rem;
+}
+
+.exp-wrp-right{
+    margin: 0.6rem 0.3rem;
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+}
+.exp-logo{
+    width: 4rem;
+    height: 3rem;
+    /* transform: rotate(270deg); */
+}
+.exp{
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--clr-primary);    
+}
+.role-heading{
+    margin: 0.8rem 0 2rem 0;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--clr-primary);    
+}
+.desc-role{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--clr-primary);    
+}
+
+
+
+/* column2 */
+
 .column2{
     border: 2px solid deeppink;
 }
