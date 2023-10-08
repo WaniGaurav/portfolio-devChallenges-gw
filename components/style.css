@@ -295,12 +295,12 @@ section{
 }
 .exp-wrp-left{
     place-self:start;
-    margin: 0.6rem 0.3rem;
+    margin: 0.6rem 0.6rem;
 }
 
 .exp-wrp-right{
     margin: 0.6rem 0.3rem;
-    width: 18rem;
+    width: 17rem;
     display: flex;
     flex-direction: column;
 }
@@ -315,13 +315,14 @@ section{
     color: var(--clr-primary);    
 }
 .role-heading{
-    margin: 0.8rem 0 2rem 0;
+    margin: 0.8rem 0 1rem 0;
     font-family: Montserrat;
     font-size: 18px;
     font-weight: 800;
     color: var(--clr-primary);    
 }
 .desc-role{
+    width: fit-content;
     font-family: Montserrat;
     font-size: 16px;
     font-weight: 500;
@@ -332,7 +333,7 @@ section{
 /* Hobbies */
 
 .wrapper-design{
-    margin: 1rem 1.5rem;
+    margin: 1rem 0.9rem;
     border-radius: 12px;
     box-shadow: 10px 10px 20px rgb(71, 95, 80);
 }
@@ -388,5 +389,109 @@ section{
 
 .column2{
     grid-column: 2 / 4;
+    height: 40rem;
     border: 2px solid deeppink;
+}
+.tabs-wrap{
+    margin: 1rem 1.5rem ;
+}
+.tabs{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background-color: var(--clr-skill-cart2);
+}
+.tab-heading{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--clr-primary);    
+}
+.proj-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 12px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.proj-grid:hover{
+    box-shadow: 0px 10px 20px rgb(225, 54, 2);
+}
+.projGrid-column1{
+
+}
+.proj-img{
+    padding: 1rem;
+    width: 322px;
+    height: 274px;
+    border-radius: 12px;
+}
+
+.projGrid-column2{
+    padding: 0.8rem;
+    grid-column: 2  / 4;
+    display: flex;
+    flex-wrap: wrap;
+}
+.proj-heading{
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--clr-primary);    
+}
+.proj-desc{
+    margin: 1rem 0 3rem 0;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--clr-second);    
+}
+
+
+.proj-links-wrapper{
+    /* margin-top: 3rem; */
+    display: flex;
+}
+.links-div1 a{
+    text-decoration: none;
+}
+.links-div1{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 136.27px;
+    height: 46px;
+    border-radius: 12px;
+    background-color: #2F80ED;
+}
+.proj-link{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;    
+    color: #FFFFFF;
+}
+.links-div2 a{
+    text-decoration: none;
+}
+.links-div2{
+    margin-left: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 136.27px;
+    height: 46px;
+    border-radius: 12px;
+    /* background-color: #FFFFFF; */
+    border: 1px solid #2F80ED
+}
+.git-link{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;    
+    color: #2F80ED;
 }
