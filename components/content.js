@@ -98,6 +98,72 @@ let hobbies = [
   },
 ];
 
+let projects = [
+  {
+    projhRef: "./components/images/proj-images/not-found/not-found-merged-old.png",
+    projSrc: "./components/images/proj-images/not-found/not-found-merged.png",
+    projAlt: "404 Not Found page",
+    projHeading: "404 Not Found",
+    projDesc:"In this project, I work with CSS GRID and FLEXBOX to create responsive page.",
+    projDemo: "https://404-not-found-gw.netlify.app/",
+    projCode: "https://github.com/WaniGaurav/devchallenges",
+  },
+  {
+    projhRef:"./components/images/proj-images/my-team-page/my-team-page-merged-old.png",
+    projSrc:"./components/images/proj-images/my-team-page/my-team-page-merged.png",
+    projAlt: " My team page",
+    projHeading: "My team page",
+    projDesc:"In this project, I work with CSS GRID and FLEXBOX to create responsive page.",
+    projDemo: "https://my-team-page-gw.netlify.app/",
+    projCode: "https://github.com/WaniGaurav/My-team-page",
+  },
+  {
+    projhRef: "./components/images/proj-images/interior/interior-merged-old.png",
+    projSrc: "./components/images/proj-images/interior/interior-merged.png",
+    projAlt: "Interior Consultant page",
+    projHeading: "Interior Consultant",
+    projDesc:"In this project, I work with HTML, CSS: GRID, and FLEXBOX to create layouts, collapsed navigation, and make the page responsive.",
+    projDemo: "https://interiorgw.netlify.app/",
+    projCode: "https://github.com/WaniGaurav/interior",
+  },
+  {
+    projhRef: "./components/images/proj-images/recipe/recipe-merged-old.png",
+    projSrc: "./components/images/proj-images/recipe/recipe-merged.png",
+    projAlt: "Recipe page",
+    projHeading: "Recipe blog",
+    projDesc:"In this project, I work with CSS: GRID and FLEXBOX to create layouts and make pages responsive, and I also use JAVASCRIPT for creating dynamic content.",
+    projDemo: "https://recipe-page-gw.netlify.app/",
+    projCode: "https://github.com/WaniGaurav/recipe-page",
+  },
+  {
+    projhRef: "./components/images/proj-images/gallery/gallery-merged-old.png",
+    projSrc: "./components/images/proj-images/gallery/gallery-merged.png",
+    projAlt: "My Gallery page",
+    projHeading: "My Gallery",
+    projDesc:"In this project, I work with CSS GRID and FLEXBOX to create responsive page.",
+    projDemo: "https://my-gallery-page-gw.netlify.app/",
+    projCode: "https://github.com/WaniGaurav/my-gallery-master-devChallenges",
+  },
+  {
+    projhRef:"./components/images/proj-images/checkout/checkout-mobile-merged-old.png",
+    projSrc:"./components/images/proj-images/checkout/checkout-mobile-merged.png",
+    projAlt: "Checkout Page",
+    projHeading: "Checkout Page",
+    projDesc:"In this project, I work with HTML, CSS: GRID, and FLEXBOX to create layouts and make pages responsive, and I also use JAVASCRIPT for creating alerts and dynamic content. I also added validation to the forms.",
+    projDemo: "https://checkout-page-devchallenges-gw.netlify.app/",
+    projCode: "https://github.com/WaniGaurav/checkout-page-devChallenges",
+  },
+  {
+    projhRef: "./components/images/proj-images/edie/edie-merged-old.png",
+    projSrc: "./components/images/proj-images/edie/edie-merged.png",
+    projAlt: "Edie homepage",
+    projHeading: "Edie homepage",
+    projDesc:"In this project, I work with CSS: GRID and FLEXBOX to create card and gallery layouts, and I also use JAVASCRIPT for creating dynamic content.",
+    projDemo: "https://edie-homepage-devchallenges-gw.netlify.app/",
+    projCode: "https://github.com/WaniGaurav/edie-homepage-devChallenges",
+  },
+];
+
 let trchnologiesCard = () => {
   let role = document.querySelector(".skill");
 
@@ -118,7 +184,7 @@ let expCard = (e) => {
   experiance.map((expData) => {
     let divClass = document.createElement("div");
     divClass.classList.add("exp-wrapper", "wrapper-design");
-      divClass.innerHTML = `<div class="exp-wrp-left">
+    divClass.innerHTML = `<div class="exp-wrp-left">
         <img loading="lazy" class="exp-logo" src="${expData.logosrc}" alt="${expData.logoAltTxt}">
       </div>
       <div class="exp-wrp-right">
@@ -146,3 +212,32 @@ let hobbyCard = () => {
 };
 
 hobbyCard();
+
+let projectTabs = () => {
+  let proj = document.querySelector(".tabs");
+
+  projects.map((projData) => {
+    let divClass = document.createElement("div");
+    divClass.classList.add("proj-grid", "wrapper-design");
+    divClass.innerHTML = `<div class="projGrid-column1 ">
+      <a target="_blank" href="${projData.projhRef}">
+      <img loading="lazy" class="proj-img" src="${projData.projSrc}" alt="${projData.projAlt}"/>
+      </a>
+    </div>
+    <div class="projGrid-column2 ">
+      <span class="proj-heading">${projData.projHeading}</span>
+      <span class="proj-desc">${projData.projDesc}</span>
+      <div class="proj-links-wrapper">
+        <div class="links-div1">
+          <a target="_blank" class="proj-link" href="${projData.projDemo}">Demo</a>
+        </div>
+        <div class="links-div2">
+          <a target="_blank" class="git-link" href="${projData.projCode}">Code</a>
+        </div>
+      </div>
+    </div>`;
+    proj.appendChild(divClass);
+  });
+};
+
+projectTabs();
