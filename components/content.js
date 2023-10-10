@@ -164,6 +164,28 @@ let projects = [
   },
 ];
 
+let btnHold ;
+let tabBtn = document.querySelectorAll(".tab-btn");
+console.log(...tabBtn)
+// console.log(tabBtn)
+
+// for (let index = 0; index < tabBtn.length; index++) {
+//   tabBtn[index].addEventListener("click",()=>{
+//     btnHold = tabBtn[index];
+//     console.log(btnHold.className);
+//     if (0<index<tabBtn.length) {
+//       console.log(btnHold.id);
+//       btnHold = tabBtn[index-1];
+//       document.getElementById(btnHold.id).style.display="flex";
+//     }
+//   })
+// }
+
+// let displayNone = ()=>{
+  
+//   btnHold.id
+// }
+
 let trchnologiesCard = () => {
   let role = document.querySelector(".skill");
 

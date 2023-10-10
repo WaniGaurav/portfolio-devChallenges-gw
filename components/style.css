@@ -141,7 +141,7 @@ section{
 /* mainGrid section */
 .mainGrid{
     margin-top: 2rem;
-    /* --min-cols-size:20rem; */
+    /* --min-cols-size:2    0rem; */
     display: grid;
     gap: 1rem;
     /* grid-template-columns: repeat(auto-fit, minmax(min(var(--min-cols-size),100%),1fr)); */
@@ -412,11 +412,34 @@ section{
     text-align: left;
     color: var(--clr-primary);    
 }
+
+.tab-btn{
+    margin-left: 0.7rem;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    width: 140px;
+    height: 40px;
+    border-radius: 16px;
+    color: #7c13b4;
+}
+/* #tab-btn1,
+#tab-btn2{
+    display: none;
+} */
+.tab-btn:hover{
+    color: #FFFFFF;
+    background: #ff003b;
+    transition: ease-in-out 0.8s;
+}
+.tab-btn-active{
+    background-color: brown;
+    color: floralwhite;
+}
 .proj-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border-radius: 12px;
-    /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
     box-shadow: 10px 10px 20px rgb(71, 95, 80);
 }
 .proj-grid:hover{
