@@ -390,7 +390,7 @@ section{
 
 .column2{
     grid-column: 2 / 4;
-    height: 40rem;
+    height: fit-content;
     border: 2px solid deeppink;
 }
 .tabs-wrap{
@@ -427,12 +427,12 @@ section{
 #tab-btn2{
     display: none;
 } */
-.tab-btn:hover{
+/* .tab-btn:hover{
     color: #FFFFFF;
     background: #ff003b;
     transition: ease-in-out 0.8s;
-}
-.tab-btn-active{
+} */
+.tabs-btn-active{
     background-color: brown;
     color: floralwhite;
 }
@@ -441,6 +441,9 @@ section{
     grid-template-columns: repeat(3, 1fr);
     border-radius: 12px;
     box-shadow: 10px 10px 20px rgb(71, 95, 80);
+}
+.displayClass{
+    display: grid;
 }
 .proj-grid:hover{
     box-shadow: 0px 10px 20px rgb(83, 80, 207);

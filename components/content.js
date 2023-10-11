@@ -98,7 +98,7 @@ let hobbies = [
   },
 ];
 
-let projects = [
+let htmlProjects = [
   {
     projhRef: "./components/images/proj-images/not-found/not-found-merged-old.png",
     projSrc: "./components/images/proj-images/not-found/not-found-merged.png",
@@ -118,6 +118,18 @@ let projects = [
     projCode: "https://github.com/WaniGaurav/My-team-page",
   },
   {
+    projhRef: "./components/images/proj-images/gallery/gallery-merged-old.png",
+    projSrc: "./components/images/proj-images/gallery/gallery-merged.png",
+    projAlt: "My Gallery page",
+    projHeading: "My Gallery",
+    projDesc:"In this project, I work with CSS GRID and FLEXBOX to create responsive page.",
+    projDemo: "https://my-gallery-page-gw.netlify.app/",
+    projCode: "https://github.com/WaniGaurav/my-gallery-master-devChallenges",
+  }
+]
+let javacriptProjects = [
+
+  {
     projhRef: "./components/images/proj-images/interior/interior-merged-old.png",
     projSrc: "./components/images/proj-images/interior/interior-merged.png",
     projAlt: "Interior Consultant page",
@@ -135,15 +147,7 @@ let projects = [
     projDemo: "https://recipe-page-gw.netlify.app/",
     projCode: "https://github.com/WaniGaurav/recipe-page",
   },
-  {
-    projhRef: "./components/images/proj-images/gallery/gallery-merged-old.png",
-    projSrc: "./components/images/proj-images/gallery/gallery-merged.png",
-    projAlt: "My Gallery page",
-    projHeading: "My Gallery",
-    projDesc:"In this project, I work with CSS GRID and FLEXBOX to create responsive page.",
-    projDemo: "https://my-gallery-page-gw.netlify.app/",
-    projCode: "https://github.com/WaniGaurav/my-gallery-master-devChallenges",
-  },
+  
   {
     projhRef:"./components/images/proj-images/checkout/checkout-mobile-merged-old.png",
     projSrc:"./components/images/proj-images/checkout/checkout-mobile-merged.png",
@@ -162,29 +166,50 @@ let projects = [
     projDemo: "https://edie-homepage-devchallenges-gw.netlify.app/",
     projCode: "https://github.com/WaniGaurav/edie-homepage-devChallenges",
   },
-];
+]
+let reactProjects = []
 
-let btnHold ;
+
 let tabBtn = document.querySelectorAll(".tab-btn");
-console.log(...tabBtn)
-// console.log(tabBtn)
+let ifboolval = true;
+// let tabContentDisplay = document.getElementsByClassName("proj-grid");
+console.log(...tabBtn);
 
-// for (let index = 0; index < tabBtn.length; index++) {
-//   tabBtn[index].addEventListener("click",()=>{
-//     btnHold = tabBtn[index];
-//     console.log(btnHold.className);
-//     if (0<index<tabBtn.length) {
-//       console.log(btnHold.id);
-//       btnHold = tabBtn[index-1];
-//       document.getElementById(btnHold.id).style.display="flex";
-//     }
-//   })
-// }
-
-// let displayNone = ()=>{
-  
-//   btnHold.id
-// }
+for (let index = 0; index < tabBtn.length; index++) {
+  // let tabContentDisplay;
+  // console.log(tabContentDisplay);
+  tabBtn[index].addEventListener("click",(e)=>{
+    e.preventDefault();
+    
+    let tabContentDisplay = tabBtn[index].id;
+    // document.getElementById(tabContentDisplay).classList.add("tab-btn-active");
+    console.log(tabContentDisplay);
+    
+    // if (ifboolval) {
+      if(tabContentDisplay == "html-btn") {
+        // document.getElementById(tabContentDisplay).classList.add("tab-btn-active");
+        if (ifboolval == true) {
+          projectTabs(htmlProjects);
+          ifboolval=false;
+        }
+      }
+      else if(tabContentDisplay == "js-btn") {
+        // document.getElementById(tabContentDisplay).classList.add("tab-btn-active");
+        if (ifboolval == true) {
+          projectTabs(javacriptProjects);
+          ifboolval=false;
+        }
+      }
+      else{
+        if(tabContentDisplay == "react-btn") {
+          // document.getElementById(tabContentDisplay).classList.add("tab-btn-active");
+          projectTabs(reactProjects);
+        }
+        ifboolval=false;
+      }
+    })
+    // document.getElementById(tabContentDisplay).classList.remove("tab-btn-active");
+}
 
 let trchnologiesCard = () => {
   let role = document.querySelector(".skill");
@@ -235,12 +260,12 @@ let hobbyCard = () => {
 
 hobbyCard();
 
-let projectTabs = () => {
+let projectTabs = (projects) => {
   let proj = document.querySelector(".tabs");
 
   projects.map((projData) => {
     let divClass = document.createElement("div");
-    divClass.classList.add("proj-grid", "wrapper-design");
+    divClass.classList.add("proj-grid", "wrapper-design","displayClass");
     divClass.innerHTML = `<div class="projGrid-column1 ">
       <a target="_blank" href="${projData.projhRef}">
       <img loading="lazy" class="proj-img" src="${projData.projSrc}" alt="${projData.projAlt}"/>
@@ -260,6 +285,13 @@ let projectTabs = () => {
     </div>`;
     proj.appendChild(divClass);
   });
+  let valueDisplayClass = document.getElementsByClassName('displayClass');
+  console.log(valueDisplayClass.length);
+  for (var i=0;i<valueDisplayClass.length;i+=1){
+    valueDisplayClass[i].style.display = 'grid';
+  }
 };
 
-projectTabs();
+projectTabs(htmlProjects);
+
+// projectTabs(javacriptProjects);
