@@ -26,7 +26,7 @@ let darkMode = () => {
 
 // Light mode
 let lightMode = () => {
-  document.body.style.backgroundColor = "#e4ea8a";
+  document.body.style.backgroundColor = "#252586";
   document.documentElement.style.setProperty("--clr-primary", "#4F4F4F");
   document.documentElement.style.setProperty("--clr-second", "#828282");
   document.documentElement.style.setProperty("--clr-third", "#333333");
@@ -171,45 +171,62 @@ let reactProjects = []
 
 
 let tabBtn = document.querySelectorAll(".tab-btn");
-let ifboolval = true;
-// let tabContentDisplay = document.getElementsByClassName("proj-grid");
-console.log(...tabBtn);
+let divClassName = ["htmlClass", "jsClass", "reactClass"]
 
+// let tabContentHistory = [];
 for (let index = 0; index < tabBtn.length; index++) {
-  // let tabContentDisplay;
-  // console.log(tabContentDisplay);
   tabBtn[index].addEventListener("click",(e)=>{
     e.preventDefault();
     
+    console.log(tabBtn[index]);
     let tabContentDisplay = tabBtn[index].id;
-    // document.getElementById(tabContentDisplay).classList.add("tab-btn-active");
-    console.log(tabContentDisplay);
-    
-    // if (ifboolval) {
-      if(tabContentDisplay == "html-btn") {
-        // document.getElementById(tabContentDisplay).classList.add("tab-btn-active");
-        if (ifboolval == true) {
-          projectTabs(htmlProjects);
-          ifboolval=false;
-        }
+      if(tabContentDisplay == "html-btn") {       // tabBtn[0]
+        console.log(tabContentDisplay);
+        document.getElementById(tabContentDisplay).classList.add("tabs-btn-active");
+        document.getElementById(tabBtn[1].id).classList.remove("tabs-btn-active");
+        document.getElementById(tabBtn[2].id).classList.remove("tabs-btn-active");
+        let b = document.getElementsByClassName("proj-grid");
+        console.log(b)
+        console.log(b.length)
+        projectTabs(htmlProjects, "htmlClass");
+        
       }
-      else if(tabContentDisplay == "js-btn") {
-        // document.getElementById(tabContentDisplay).classList.add("tab-btn-active");
-        if (ifboolval == true) {
-          projectTabs(javacriptProjects);
-          ifboolval=false;
-        }
+      else if(tabContentDisplay == "js-btn") {    // tabBtn[1]
+        console.log("JS");
+        console.log(tabContentDisplay);
+        document.getElementById(tabContentDisplay).classList.add("tabs-btn-active");
+        document.getElementById(tabBtn[0].id).classList.remove("tabs-btn-active");
+        document.getElementById(tabBtn[2].id).classList.remove("tabs-btn-active");
+        let b = document.getElementsByClassName("proj-grid");
+        console.log(b)
+        console.log(b.length)
+        projectTabs(javacriptProjects, "jsClass");
+        // for (let index = 0; index < divClassName.length; index++) {
+        //   let b = document.getElementsByClassName(`${divClassName[index]}`);
+        //   console.log(b)
+        //   console.log(b.length)
+        //   if (index !== 1) {
+        //     b[index].style.display="none";
+        //   }
+        // }
       }
-      else{
-        if(tabContentDisplay == "react-btn") {
-          // document.getElementById(tabContentDisplay).classList.add("tab-btn-active");
-          projectTabs(reactProjects);
+      else{   // tabBtn[2]
+        // console.log(tabContentDisplay);
+        document.getElementById(tabContentDisplay).classList.add("tabs-btn-active");
+        document.getElementById(tabBtn[0].id).classList.remove("tabs-btn-active");
+        document.getElementById(tabBtn[1].id).classList.remove("tabs-btn-active");
+        
+        let b = document.getElementsByClassName("proj-grid");
+        console.log(b)
+        console.log(b.length)
+        projectTabs(reactProjects, "reactClass");
+          
         }
-        ifboolval=false;
-      }
-    })
-    // document.getElementById(tabContentDisplay).classList.remove("tab-btn-active");
+    console.log(index)
+  })
 }
+// let b = document.getElementsByClassName("proj-grid");
+// console.log(b)
 
 let trchnologiesCard = () => {
   let role = document.querySelector(".skill");
@@ -260,12 +277,12 @@ let hobbyCard = () => {
 
 hobbyCard();
 
-let projectTabs = (projects) => {
+let projectTabs = (projects, displayClass) => {
   let proj = document.querySelector(".tabs");
 
   projects.map((projData) => {
     let divClass = document.createElement("div");
-    divClass.classList.add("proj-grid", "wrapper-design","displayClass");
+    divClass.classList.add("proj-grid", "wrapper-design" , displayClass);
     divClass.innerHTML = `<div class="projGrid-column1 ">
       <a target="_blank" href="${projData.projhRef}">
       <img loading="lazy" class="proj-img" src="${projData.projSrc}" alt="${projData.projAlt}"/>
@@ -285,13 +302,13 @@ let projectTabs = (projects) => {
     </div>`;
     proj.appendChild(divClass);
   });
-  let valueDisplayClass = document.getElementsByClassName('displayClass');
-  console.log(valueDisplayClass.length);
-  for (var i=0;i<valueDisplayClass.length;i+=1){
-    valueDisplayClass[i].style.display = 'grid';
-  }
+  // let valueDisplayClass = document.getElementsByClassName('displayClass');
+  // // console.log(valueDisplayClass.length);
+  // for (let i=0;i<valueDisplayClass.length;i+=1){
+  //   valueDisplayClass[i].style.display = 'grid';
+  // }
 };
 
-projectTabs(htmlProjects);
+// projectTabs(htmlProjects, "htmlClass");
 
 // projectTabs(javacriptProjects);
