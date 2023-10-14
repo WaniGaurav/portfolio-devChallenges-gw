@@ -169,64 +169,58 @@ let javacriptProjects = [
 ]
 let reactProjects = []
 
-
+// projects section
 let tabBtn = document.querySelectorAll(".tab-btn");
 let divClassName = ["htmlClass", "jsClass", "reactClass"]
 
-// let tabContentHistory = [];
 for (let index = 0; index < tabBtn.length; index++) {
   tabBtn[index].addEventListener("click",(e)=>{
-    e.preventDefault();
+    // e.preventDefault();
     
-    console.log(tabBtn[index]);
     let tabContentDisplay = tabBtn[index].id;
+    let b = document.querySelectorAll(".proj-grid");
+
       if(tabContentDisplay == "html-btn") {       // tabBtn[0]
-        console.log(tabContentDisplay);
+
         document.getElementById(tabContentDisplay).classList.add("tabs-btn-active");
         document.getElementById(tabBtn[1].id).classList.remove("tabs-btn-active");
         document.getElementById(tabBtn[2].id).classList.remove("tabs-btn-active");
-        let b = document.getElementsByClassName("proj-grid");
-        console.log(b)
-        console.log(b.length)
-        projectTabs(htmlProjects, "htmlClass");
+
+        // Hiding other tab's project
+        b.forEach((element)=>{
+          element.style.display = "none";
+        })
+        projectTabs(htmlProjects);
         
       }
       else if(tabContentDisplay == "js-btn") {    // tabBtn[1]
-        console.log("JS");
-        console.log(tabContentDisplay);
+        
         document.getElementById(tabContentDisplay).classList.add("tabs-btn-active");
         document.getElementById(tabBtn[0].id).classList.remove("tabs-btn-active");
         document.getElementById(tabBtn[2].id).classList.remove("tabs-btn-active");
-        let b = document.getElementsByClassName("proj-grid");
-        console.log(b)
-        console.log(b.length)
-        projectTabs(javacriptProjects, "jsClass");
-        // for (let index = 0; index < divClassName.length; index++) {
-        //   let b = document.getElementsByClassName(`${divClassName[index]}`);
-        //   console.log(b)
-        //   console.log(b.length)
-        //   if (index !== 1) {
-        //     b[index].style.display="none";
-        //   }
-        // }
+        
+        // Hiding other tab's project
+        b.forEach((element)=>{
+          element.style.display = "none";
+        })
+        projectTabs(javacriptProjects);
       }
       else{   // tabBtn[2]
-        // console.log(tabContentDisplay);
+
         document.getElementById(tabContentDisplay).classList.add("tabs-btn-active");
         document.getElementById(tabBtn[0].id).classList.remove("tabs-btn-active");
         document.getElementById(tabBtn[1].id).classList.remove("tabs-btn-active");
         
-        let b = document.getElementsByClassName("proj-grid");
-        console.log(b)
-        console.log(b.length)
-        projectTabs(reactProjects, "reactClass");
+        // Hiding other tab's project
+        b.forEach((element)=>{
+          element.style.display = "none";
+        })
+        projectTabs(reactProjects);
           
         }
-    console.log(index)
   })
 }
-// let b = document.getElementsByClassName("proj-grid");
-// console.log(b)
+// projects section End
 
 let trchnologiesCard = () => {
   let role = document.querySelector(".skill");
@@ -277,12 +271,12 @@ let hobbyCard = () => {
 
 hobbyCard();
 
-let projectTabs = (projects, displayClass) => {
+let projectTabs = (projects) => {
   let proj = document.querySelector(".tabs");
 
   projects.map((projData) => {
     let divClass = document.createElement("div");
-    divClass.classList.add("proj-grid", "wrapper-design" , displayClass);
+    divClass.classList.add("proj-grid", "wrapper-design");
     divClass.innerHTML = `<div class="projGrid-column1 ">
       <a target="_blank" href="${projData.projhRef}">
       <img loading="lazy" class="proj-img" src="${projData.projSrc}" alt="${projData.projAlt}"/>
@@ -302,13 +296,6 @@ let projectTabs = (projects, displayClass) => {
     </div>`;
     proj.appendChild(divClass);
   });
-  // let valueDisplayClass = document.getElementsByClassName('displayClass');
-  // // console.log(valueDisplayClass.length);
-  // for (let i=0;i<valueDisplayClass.length;i+=1){
-  //   valueDisplayClass[i].style.display = 'grid';
-  // }
 };
 
-// projectTabs(htmlProjects, "htmlClass");
-
-// projectTabs(javacriptProjects);
+projectTabs(htmlProjects);
