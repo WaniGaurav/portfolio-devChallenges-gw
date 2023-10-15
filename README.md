@@ -46,10 +46,10 @@
     </tr>
     <tr>
       <td>
-        <img src = "/images/screenshots/desktop-dark.png">
+        <img src = "/components/images/screenshots/desktop-dark.png">
       </td>
       <td>
-        <img src = "/images/screenshots/mobile-dark.png">
+        <img src = "/components/images/screenshots/mobile-dark.png">
       </td>
     </tr>
   </table>
@@ -63,10 +63,10 @@
     </tr>
     <tr>
       <td>
-        <img src = "/images/screenshots/desktop-light.png">
+        <img src = "/components/images/screenshots/desktop-light.png">
       </td>
       <td>
-        <img src = "/images/screenshots/mobile-light.png">
+        <img src = "/components/images/screenshots/mobile-light.png">
       </td>
     </tr>
   </table>
