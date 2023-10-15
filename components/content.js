@@ -26,7 +26,7 @@ let darkMode = () => {
 
 // Light mode
 let lightMode = () => {
-  document.body.style.backgroundColor = "#252586";
+  document.body.style.backgroundColor = "white";
   document.documentElement.style.setProperty("--clr-primary", "#4F4F4F");
   document.documentElement.style.setProperty("--clr-second", "#828282");
   document.documentElement.style.setProperty("--clr-third", "#333333");
