@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">Portfolio</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://portfolio-devch-gw.netlify.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://legacy.devchallenges.io/solutions/vMldABxrTxtjZF7nIjEg">
       Solution
     </a>
     <span> | </span>
@@ -37,22 +37,53 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+<p align = "center">
+  <b>Dark View</b>
+  <table>
+    <tr>
+      <th>Laptop View</th>
+      <th>Mobile View</th>
+    </tr>
+    <tr>
+      <td>
+        <img src = "/images/screenshots/desktop-dark.png">
+      </td>
+      <td>
+        <img src = "/images/screenshots/mobile-dark.png">
+      </td>
+    </tr>
+  </table>
+</p>
+<p align = "center">
+  <b>Light View</b>
+  <table>
+    <tr>
+      <th>Laptop View</th>
+      <th>Mobile View</th>
+    </tr>
+    <tr>
+      <td>
+        <img src = "/images/screenshots/desktop-light.png">
+      </td>
+      <td>
+        <img src = "/images/screenshots/mobile-light.png">
+      </td>
+    </tr>
+  </table>
+</p>
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
-
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+Challenge was to create **_Portfolio_** following the design given on the website. The page should be responsive.
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- HTML
+- CSS
+- JavaScript
+- Netlify
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/601be770-739e-4b14-8239-d4309ce66232/deploy-status)](https://app.netlify.com/sites/portfolio-devch-gw/deploys)
 
 ## Features
 
@@ -88,5 +119,4 @@ $ npm start
 ## Contact
 
 - Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- GitHub [@WaniGaurav](https://github.com/WaniGaurav)

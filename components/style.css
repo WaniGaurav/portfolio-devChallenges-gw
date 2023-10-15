@@ -110,6 +110,7 @@ section{
     color: var(--clr-second);    
 }
 .email-addrs{
+    text-decoration: none;
     font-family: Montserrat;
     font-size: 18px;
     font-weight: 500;
@@ -137,10 +138,6 @@ section{
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
-}
-.desc-role,
-.hob-desc:nth-child(3){
-    border: 2px solid red;
 }
 
 /* Animates skill bar */
@@ -264,7 +261,7 @@ section{
 .wrapper-design{
     margin: 1rem 0.9rem;
     border-radius: 12px;
-    box-shadow: 10px 10px 20px rgb(71, 95, 80);
+    box-shadow: 5px 6px 20px rgb(71, 95, 80);
 }
 .cart-design{
     margin: 2rem 0;
@@ -272,16 +269,17 @@ section{
     border-radius: 12px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     background-color:#d3f7f2;
-    background-color:var(--clr-skill-cart2);
+    /* background-color:var(--clr-skill-cart2); */
+    background-color:var(--clr-skill-cart);
 }
 
 
 /* Experience */
 
 .experience{
-    /* height: fit-content; */
     margin: 2rem 0 0 0;
-    height: 31rem;
+    height: fit-content;
+    /* height: 31rem; */
     display: grid;
 }
 .exp-heading{
@@ -311,8 +309,10 @@ section{
     flex-direction: column;
 }
 .exp-logo{
-    width: 4rem;
+    width: 5rem;
     height: 3rem;
+    background-color: #d3f7f2;
+    border-radius: 6px;
 }
 .exp{
     font-family: Montserrat;
@@ -338,7 +338,7 @@ section{
 
 /* Hobbies */
 
-.hobbies{
+/* .hobbies{
     margin: 1rem 0 0 0;
     height: fit-content;
     display: grid;
@@ -375,12 +375,12 @@ section{
     font-size: 16px;
     font-weight: 500;
     color: var(--clr-primary);    
-}
+} */
 
 /* column3 */
-.column3{
+/* .column3{
     grid-row: 2/3;
-}
+} */
 
 
 /* column2 */
@@ -397,8 +397,9 @@ section{
     display: flex;
     flex-wrap: wrap;
     border-radius: 12px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    background-color: var(--clr-skill-cart2);
+    /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
+    /* background-color: var(--clr-skill-cart2); */
+    background-color: var(--clr-skill-cart);
 }
 .tab-heading{
     font-family: Montserrat;
@@ -434,7 +435,7 @@ section{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border-radius: 12px;
-    box-shadow: 10px 10px 20px rgb(71, 95, 80);
+    box-shadow: 5px 6px 20px rgb(71, 95, 80);
 }
 
 .proj-grid:hover{
@@ -448,7 +449,8 @@ section{
     width: 222px;
     height: 180px;
     border-radius: 8px;
-    box-shadow: 15px 15px 20px 0px rgb(118 139 147);
+    /* box-shadow: 15px 15px 20px 0px rgb(118 139 147); */
+    box-shadow: 9px 15px 0px 0px rgb(118 132 147);
     /* border: 2px solid green; */
 }
 
@@ -530,13 +532,19 @@ section{
     .column2{
         order: 2;
     }
-    .column3{
+    /* .column3{
         order: 3;
+    } */
+    .darkDiv,
+    .skill,
+    .intro-section,
+    .experience,
+    .tabs{
+        width: 340px;
     }
     
     .darkDiv{
         text-align: end;
-        padding: 0 2.5rem 2rem 0;
     }
     .dark{
         margin: 0;
@@ -578,8 +586,11 @@ section{
         flex-direction: column;
         align-items: center;
     }
+    .technologis {
+        font-weight: 600;
+    }
     .bar{
-        width: 12rem;
+        width: 11rem;
     }
     .experience{
         height: fit-content;
@@ -594,10 +605,11 @@ section{
     .exp-wrp-right{
         margin: 0;
     }
+    /*
     .hob-img {
         width: 280px;
         height: 180px;
-    }
+    } */
 
     /* column two */
 
@@ -605,13 +617,6 @@ section{
         margin: 1rem 0 0 0;
         display: flex;
         justify-content: center;
-    }
-    .skill,
-    /* .proj-grid, */
-    .experience,
-    .tabs,
-    .hobbies{
-        width: 340px;
     }
 
     .tabs{
@@ -650,4 +655,10 @@ section{
     .proj-links-wrapper > div {
         margin: 0 0 1rem 0;
     }
+
+    /* column 3 */
+    /* .column3{
+        display: flex;
+        justify-content: center;
+    } */
 }

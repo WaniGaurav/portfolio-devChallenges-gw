@@ -19,7 +19,8 @@ let darkMode = () => {
   document.documentElement.style.setProperty("--clr-primary", "#eee");
   document.documentElement.style.setProperty("--clr-second", "#eee");
   document.documentElement.style.setProperty("--clr-third", "#28c1ad");
-  document.documentElement.style.setProperty("--clr-skill-cart", "#32008b");
+  // document.documentElement.style.setProperty("--clr-skill-cart", "#32008b");
+  document.documentElement.style.setProperty("--clr-skill-cart", "#090810");
   document.documentElement.style.setProperty("--clr-skill-cart2", "#033641");
 };
 // Dark mode End
@@ -62,41 +63,39 @@ let experiance = [
   {
     logosrc: "./components/images/accenture-logo.png",
     logoAltTxt: "Accenture logo",
-    expDate: "Feb 2020 - Aug 2020",
+    expDate: "Feb 2020 - Aug 2020 &nbsp;&nbsp;( 6 - months )",
     roleName: "Web Developer",
-    roleDesc:
-      "Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie",
+    roleDesc:"Utilizing AEM to layout pages, troubleshoot issues and also working with adjacent development teams to implement integrated technical solutions.",
   },
   {
     logosrc: "./components/images/accenture-logo.png",
     logoAltTxt: "Accenture logo",
-    expDate: "Jun 2019 - Jan 2020",
+    expDate: "Jun 2019 - Jan 2020 &nbsp;&nbsp;( 7 - months )",
     roleName: "Web Developer",
-    roleDesc:
-      "Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie",
+    roleDesc:"Created AEM components and templates. Design and maintain scalable and stable web solutions that meet business needs."
   },
 ];
 
-let hobbies = [
-  {
-    hobbyPic: "./components/images/gaming.png",
-    hobbyAltTxt: "playing game on playstation",
-    hobbyName: "Gaming",
-    hobbyDesc: "Quisque feugiat malesuada molestie.",
-  },
-  {
-    hobbyPic: "./components/images/playing-chess.png",
-    hobbyAltTxt: "Playing chess on board",
-    hobbyName: "Playng chess",
-    hobbyDesc: "Quisque feugiat malesuada molestie.",
-  },
-  {
-    hobbyPic: "./components/images/tour.png",
-    hobbyAltTxt: "",
-    hobbyName: "Travelling",
-    hobbyDesc: "Quisque feugiat malesuada molestie.",
-  },
-];
+// let hobbies = [
+//   {
+//     hobbyPic: "./components/images/gaming.png",
+//     hobbyAltTxt: "playing game on playstation",
+//     hobbyName: "Gaming",
+//     hobbyDesc: "playing game on playstation",
+//   },
+//   {
+//     hobbyPic: "./components/images/playing-chess.png",
+//     hobbyAltTxt: "Playing chess on board",
+//     hobbyName: "Playng chess",
+//     hobbyDesc: "Playing chess on board",
+//   },
+//   {
+//     hobbyPic: "./components/images/tour.png",
+//     hobbyAltTxt: "temple image",
+//     hobbyName: "Travelling",
+//     hobbyDesc: "Traveling to various places and exploring the different temples.",
+//   },
+// ];
 
 let htmlProjects = [
   {
@@ -256,20 +255,20 @@ let expCard = (e) => {
 
 expCard();
 
-let hobbyCard = () => {
-  let hob = document.querySelector(".hobbies");
+// let hobbyCard = () => {
+//   let hob = document.querySelector(".hobbies");
 
-  hobbies.map((hobData) => {
-    let divClass = document.createElement("div");
-    divClass.classList.add("hobbies-wrapper", "wrapper-design");
-    divClass.innerHTML = `<img loading="lazy" class="hob-img" src="${hobData.hobbyPic}" alt="${hobData.hobbyAltTxt}">
-        <span class="hob-name">${hobData.hobbyName}</span>
-        <span class="hob-desc">${hobData.hobbyDesc}</span>`;
-    hob.appendChild(divClass);
-  });
-};
+//   hobbies.map((hobData) => {
+//     let divClass = document.createElement("div");
+//     divClass.classList.add("hobbies-wrapper", "wrapper-design");
+//     divClass.innerHTML = `<img loading="lazy" class="hob-img" src="${hobData.hobbyPic}" alt="${hobData.hobbyAltTxt}">
+//         <span class="hob-name">${hobData.hobbyName}</span>
+//         <span class="hob-desc">${hobData.hobbyDesc}</span>`;
+//     hob.appendChild(divClass);
+//   });
+// };
 
-hobbyCard();
+// hobbyCard();
 
 let projectTabs = (projects) => {
   let proj = document.querySelector(".tabs");
