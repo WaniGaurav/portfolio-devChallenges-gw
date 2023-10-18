@@ -2,6 +2,7 @@ let a = true;
 let btn = document.getElementById("btn-chng-mode");
 btn.innerHTML = "Dark Mode";
 btn.addEventListener("click", function (e) {
+  e.preventDefault;
   if (a) {
     btn.innerHTML = "Light Mode";
     darkMode();
@@ -22,6 +23,7 @@ let darkMode = () => {
   // document.documentElement.style.setProperty("--clr-skill-cart", "#32008b");
   document.documentElement.style.setProperty("--clr-skill-cart", "#090810");
   document.documentElement.style.setProperty("--clr-skill-cart2", "#033641");
+  document.documentElement.style.setProperty("--clr-cert-btn", "#00a8c5");
 };
 // Dark mode End
 
@@ -32,7 +34,7 @@ let lightMode = () => {
   document.documentElement.style.setProperty("--clr-second", "#828282");
   document.documentElement.style.setProperty("--clr-third", "#333333");
   document.documentElement.style.setProperty("--clr-skill-cart", "#d3f7f2");
-  document.documentElement.style.setProperty("--clr-skill-cart2", "#d3f7f2");
+  document.documentElement.style.setProperty("--clr-cert-btn", "#051c93");
 };
 // Light mode End
 
@@ -170,53 +172,28 @@ let reactProjects = []
 
 // projects section
 let tabBtn = document.querySelectorAll(".tab-btn");
-let divClassName = ["htmlClass", "jsClass", "reactClass"]
+let projectsName = [htmlProjects, javacriptProjects, reactProjects]
 
 for (let index = 0; index < tabBtn.length; index++) {
   tabBtn[index].addEventListener("click",(e)=>{
-    // e.preventDefault();
+    e.preventDefault;
     
-    let tabContentDisplay = tabBtn[index].id;
     let b = document.querySelectorAll(".proj-grid");
 
-      if(tabContentDisplay == "html-btn") {       // tabBtn[0]
-
-        document.getElementById(tabContentDisplay).classList.add("tabs-btn-active");
-        document.getElementById(tabBtn[1].id).classList.remove("tabs-btn-active");
-        document.getElementById(tabBtn[2].id).classList.remove("tabs-btn-active");
-
-        // Hiding other tab's project
-        b.forEach((element)=>{
-          element.style.display = "none";
-        })
-        projectTabs(htmlProjects);
-        
+    tabBtn.forEach((element)=>{
+      if (element == tabBtn[index]) {
+        element.classList.add("tabs-btn-active");
       }
-      else if(tabContentDisplay == "js-btn") {    // tabBtn[1]
-        
-        document.getElementById(tabContentDisplay).classList.add("tabs-btn-active");
-        document.getElementById(tabBtn[0].id).classList.remove("tabs-btn-active");
-        document.getElementById(tabBtn[2].id).classList.remove("tabs-btn-active");
-        
-        // Hiding other tab's project
-        b.forEach((element)=>{
-          element.style.display = "none";
-        })
-        projectTabs(javacriptProjects);
+      else{
+        element.classList.remove("tabs-btn-active");
       }
-      else{   // tabBtn[2]
+    })
 
-        document.getElementById(tabContentDisplay).classList.add("tabs-btn-active");
-        document.getElementById(tabBtn[0].id).classList.remove("tabs-btn-active");
-        document.getElementById(tabBtn[1].id).classList.remove("tabs-btn-active");
-        
-        // Hiding other tab's project
-        b.forEach((element)=>{
-          element.style.display = "none";
-        })
-        projectTabs(reactProjects);
-          
-        }
+    // Hiding other tab's project
+    b.forEach((element)=>{
+      element.style.display = "none";
+    })
+    projectTabs(projectsName[index]);
   })
 }
 // projects section End
@@ -254,21 +231,6 @@ let expCard = (e) => {
 };
 
 expCard();
-
-// let hobbyCard = () => {
-//   let hob = document.querySelector(".hobbies");
-
-//   hobbies.map((hobData) => {
-//     let divClass = document.createElement("div");
-//     divClass.classList.add("hobbies-wrapper", "wrapper-design");
-//     divClass.innerHTML = `<img loading="lazy" class="hob-img" src="${hobData.hobbyPic}" alt="${hobData.hobbyAltTxt}">
-//         <span class="hob-name">${hobData.hobbyName}</span>
-//         <span class="hob-desc">${hobData.hobbyDesc}</span>`;
-//     hob.appendChild(divClass);
-//   });
-// };
-
-// hobbyCard();
 
 let projectTabs = (projects) => {
   let proj = document.querySelector(".tabs");

@@ -10,7 +10,8 @@
     --clr-second:#828282;
     --clr-third:#333333;
     --clr-skill-cart:#d3f7f2;
-    --clr-skill-cart2:#d3f7f2;
+    --clr-cert-btn:#051c93;;
+    /* --clr-skill-cart2:#d3f7f2; */
 }
 .container{
     width: min(100%, 1440px);
@@ -153,7 +154,7 @@ section{
     font-size: 16px;
     font-weight: 600;
     height: 20px;
-    color: #051c93;
+    color: var(--clr-cert-btn);
     border-radius: 16px;
 }
 
