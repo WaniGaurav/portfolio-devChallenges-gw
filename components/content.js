@@ -172,6 +172,7 @@ let reactProjects = []
 
 // projects section
 let tabBtn = document.querySelectorAll(".tab-btn");
+// console.log(tabBtn.length)
 let projectsName = [htmlProjects, javacriptProjects, reactProjects]
 
 for (let index = 0; index < tabBtn.length; index++) {
@@ -193,10 +194,13 @@ for (let index = 0; index < tabBtn.length; index++) {
     b.forEach((element)=>{
       element.style.display = "none";
     })
+    // displaying projects
     projectTabs(projectsName[index]);
+    
   })
 }
 // projects section End
+
 
 let trchnologiesCard = () => {
   let role = document.querySelector(".skill");
@@ -257,6 +261,12 @@ let projectTabs = (projects) => {
     </div>`;
     proj.appendChild(divClass);
   });
+ // pagination
+      
+ let pageNumbers = document.querySelectorAll(".proj-grid");
+ console.log(pageNumbers.length)
+
+// pagination END
 };
 
 projectTabs(htmlProjects);

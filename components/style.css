@@ -365,6 +365,7 @@ section{
 .column2{
     grid-column: 2 / 4;
     height: fit-content;
+    background-color: var(--clr-skill-cart);
 }
 .tabs-wrap{
     margin: 1rem 1.5rem ;
@@ -373,7 +374,6 @@ section{
     display: flex;
     flex-wrap: wrap;
     border-radius: 12px;
-    background-color: var(--clr-skill-cart);
 }
 .tab-heading{
     font-family: Montserrat;
@@ -487,6 +487,36 @@ section{
     font-size: 18px;
     font-weight: 500;    
     color: #2F80ED;
+}
+
+.pagination-container{
+    /* padding: 1rem 0 0 0; */
+    display: flex;
+    justify-content: flex-end;
+}
+.pagination-wrap{
+    padding: 1rem 1rem 1rem 0;
+    width: 25rem;
+    display: flex;
+    justify-content: space-around;
+}
+.pagination-wrap button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-btn{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    width: 50px;
+    height: 45px;
+    border-radius: 12px;
+    color: #7c13b4;
+}
+.page-bn-navigator{
+    font-size: 28px;
+    font-weight: 800;
 }
 
 
