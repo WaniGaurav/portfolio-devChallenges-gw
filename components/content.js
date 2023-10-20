@@ -177,10 +177,15 @@ let projectsName = [htmlProjects, javacriptProjects, reactProjects]
 
 for (let index = 0; index < tabBtn.length; index++) {
   tabBtn[index].addEventListener("click",(e)=>{
+    let btnremove = document.querySelectorAll(".page-btn");
+    btnremove.forEach((element)=>{
+      element.remove();
+    })
+    // pagination();
     e.preventDefault;
     
     let b = document.querySelectorAll(".proj-grid");
-
+    
     tabBtn.forEach((element)=>{
       if (element == tabBtn[index]) {
         element.classList.add("tabs-btn-active");
@@ -192,12 +197,15 @@ for (let index = 0; index < tabBtn.length; index++) {
 
     // Hiding other tab's project
     b.forEach((element)=>{
-      element.style.display = "none";
+      // element.style.display = "none";
+      element.remove();
     })
     // displaying projects
     projectTabs(projectsName[index]);
+    // pagination();
     
   })
+  
 }
 // projects section End
 
@@ -261,12 +269,32 @@ let projectTabs = (projects) => {
     </div>`;
     proj.appendChild(divClass);
   });
- // pagination
-      
- let pageNumbers = document.querySelectorAll(".proj-grid");
- console.log(pageNumbers.length)
 
-// pagination END
+  let projectsNumbers = document.querySelectorAll(".proj-grid");
+  console.log(projectsNumbers.length)
+
+  let projectsDisplay = 3;
+
+  let pageNumbers = Math.floor(projectsNumbers.length % projectsDisplay)+3;
+  console.log("pageNumbers " +pageNumbers);
+
+  // let pagination = ()=> {
+  let mainDiv = document.querySelector(".pagination-wrap")
+  for (let index = 0; index < pageNumbers; index++) {
+    if (index == 0 || index == pageNumbers-1) {
+    let buttonClass = document.createElement("button");
+    buttonClass.classList.add("page-btn", "page-bn-navigator");
+    buttonClass.innerHTML = `${index == 0 ? '&laquo;' : '&raquo;'}`;
+    mainDiv.appendChild(buttonClass);
+    }
+    else{
+    let buttonClass = document.createElement("button");
+    buttonClass.classList.add("page-btn");
+    buttonClass.innerHTML = `${index}`;
+    mainDiv.appendChild(buttonClass);
+    }
+    
+  }
 };
 
 projectTabs(htmlProjects);
