@@ -275,25 +275,38 @@ let projectTabs = (projects) => {
 
   let projectsDisplay = 3;
 
-  let pageNumbers = Math.floor(projectsNumbers.length % projectsDisplay)+3;
-  console.log("pageNumbers " +pageNumbers);
-
+  let pageNumbers = Math.floor(projectsNumbers.length % projectsDisplay);
+  let copyPageNumbers = pageNumbers;
+  copyPageNumbers += 2;
+  console.log("pageNumbers " +copyPageNumbers);
+  
   // let pagination = ()=> {
-  let mainDiv = document.querySelector(".pagination-wrap")
-  for (let index = 0; index < pageNumbers; index++) {
-    if (index == 0 || index == pageNumbers-1) {
-    let buttonClass = document.createElement("button");
-    buttonClass.classList.add("page-btn", "page-bn-navigator");
-    buttonClass.innerHTML = `${index == 0 ? '&laquo;' : '&raquo;'}`;
-    mainDiv.appendChild(buttonClass);
-    }
-    else{
-    let buttonClass = document.createElement("button");
-    buttonClass.classList.add("page-btn");
-    buttonClass.innerHTML = `${index}`;
-    mainDiv.appendChild(buttonClass);
+    
+    let mainDiv = document.querySelector(".pagination-wrap")
+    
+    for (let index = 0; index <= copyPageNumbers; index++) {
+      if (index == 0 || index == copyPageNumbers) {
+        let buttonClass = document.createElement("button");
+        buttonClass.classList.add("page-btn", "page-bn-navigator");
+        buttonClass.innerHTML = `${index == 0 ? '&laquo;' : '&raquo;'}`;
+        mainDiv.appendChild(buttonClass);
+      }
+      else{
+        let buttonClass = document.createElement("button");
+        buttonClass.classList.add("page-btn");
+        buttonClass.innerHTML = `${index}`;
+        mainDiv.appendChild(buttonClass);
+      }
     }
     
+  let btnNumbers = Math.floor(projectsNumbers.length / projectsDisplay);
+  console.log("btnNumbers " +btnNumbers)
+  let c = document.querySelectorAll(".page-btn");
+  console.log(c.length)
+  if (btnNumbers == 0) {
+    c.forEach((element)=>{
+      element.remove();
+    })
   }
 };
 
