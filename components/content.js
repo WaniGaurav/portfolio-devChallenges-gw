@@ -20,9 +20,7 @@ let darkMode = () => {
   document.documentElement.style.setProperty("--clr-primary", "#eee");
   document.documentElement.style.setProperty("--clr-second", "#eee");
   document.documentElement.style.setProperty("--clr-third", "#28c1ad");
-  // document.documentElement.style.setProperty("--clr-skill-cart", "#32008b");
   document.documentElement.style.setProperty("--clr-skill-cart", "#090810");
-  document.documentElement.style.setProperty("--clr-skill-cart2", "#033641");
   document.documentElement.style.setProperty("--clr-cert-btn", "#00a8c5");
 };
 // Dark mode End
@@ -77,27 +75,6 @@ let experiance = [
     roleDesc:"Created AEM components and templates. Design and maintain scalable and stable web solutions that meet business needs."
   },
 ];
-
-// let hobbies = [
-//   {
-//     hobbyPic: "./components/images/gaming.png",
-//     hobbyAltTxt: "playing game on playstation",
-//     hobbyName: "Gaming",
-//     hobbyDesc: "playing game on playstation",
-//   },
-//   {
-//     hobbyPic: "./components/images/playing-chess.png",
-//     hobbyAltTxt: "Playing chess on board",
-//     hobbyName: "Playng chess",
-//     hobbyDesc: "Playing chess on board",
-//   },
-//   {
-//     hobbyPic: "./components/images/tour.png",
-//     hobbyAltTxt: "temple image",
-//     hobbyName: "Travelling",
-//     hobbyDesc: "Traveling to various places and exploring the different temples.",
-//   },
-// ];
 
 let htmlProjects = [
   {
@@ -290,12 +267,24 @@ let projectTabs = (projects) => {
         buttonClass.classList.add("page-btn", "page-bn-navigator");
         buttonClass.innerHTML = `${index == 0 ? '&laquo;' : '&raquo;'}`;
         mainDiv.appendChild(buttonClass);
+        buttonClass.addEventListener("click",(e)=>{
+          console.log(e.target)
+        })
       }
       else{
         let buttonClass = document.createElement("button");
         buttonClass.classList.add("page-btn");
         buttonClass.innerHTML = `${index}`;
         mainDiv.appendChild(buttonClass);
+        buttonClass.addEventListener("click",(e)=>{
+          console.log(e.target)
+          // let projDisplay = 3;
+          // for (let index = 0; index < projDisplay ; index++) {
+          //  projectsNumbers.forEach((element)=>{
+
+          //  })
+          // }
+        })
       }
     }
     
