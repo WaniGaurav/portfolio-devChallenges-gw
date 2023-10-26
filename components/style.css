@@ -523,11 +523,10 @@ section{
 
 
 
-@media only screen and (max-width:1035px) {
+@media only screen and (max-width:1067px) {
 /* column two */
 
     .column2{
-        margin: 1rem 0 0 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -572,10 +571,6 @@ section{
 }
 
 
-
-
-
-
 @media only screen and (max-width:760px) {
 
     .container{
@@ -586,6 +581,7 @@ section{
     }
     .column2{
         order: 2;
+        margin: 1rem 0 0 0;
     }
     .darkDiv,
     .skill,
