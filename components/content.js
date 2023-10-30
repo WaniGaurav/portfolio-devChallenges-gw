@@ -297,7 +297,7 @@ let projectTabs = (projects) => {
     </div>`;
     proj.appendChild(divClass);
   });
-  pagination()
+  // pagination()
 };
 
 projectTabs(htmlProjects);
