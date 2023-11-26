@@ -17,6 +17,10 @@
     margin: auto;
     padding: 1rem;
 }
+.flexClass{
+    display: flex;
+}
+
 /* Mode button */
 .darkDiv{
     width:min(100%, 1046px);
@@ -373,6 +377,7 @@ section{
     display: flex;
     flex-wrap: wrap;
     border-radius: 12px;
+    justify-content: center;
 }
 .tab-heading{
     font-family: Montserrat;
@@ -397,12 +402,21 @@ section{
 
 .tab-btn:hover{
     color: #FFFFFF;
-    background: #ff003b;
+    background: #d3123ff5;
     transition: ease-in-out;
 }
 .tabs-btn-active{
     background-color: brown;
     color: floralwhite;
+}
+.btn-active{
+    background-color: #ebff25;
+}
+.not-found{
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 800;
+    color: #ff0008d6;
 }
 .proj-grid{
     display: grid;

@@ -145,7 +145,17 @@ let javacriptProjects = [
     projCode: "https://github.com/WaniGaurav/edie-homepage-devChallenges",
   },
 ]
-let reactProjects = []
+let reactProjects = [
+  {
+    projhRef: "./components/images/proj-images/edie/edie-merged-old.png",
+    projSrc: "./components/images/proj-images/edie/edie-merged.png",
+    projAlt: "Edie homepage",
+    projHeading: "Edie homepage",
+    projDesc:"In this project, I work with CSS: GRID and FLEXBOX to create card and gallery layouts, and I also use JAVASCRIPT for creating dynamic content.",
+    projDemo: "https://edie-homepage-devchallenges-gw.netlify.app/",
+    projCode: "https://github.com/WaniGaurav/edie-homepage-devChallenges",
+  },
+]
 
 // projects section
 let tabBtn = document.querySelectorAll(".tab-btn");
@@ -161,23 +171,17 @@ for (let index = 0; index < tabBtn.length; index++) {
     // pagination();
     e.preventDefault;
     
-    let b = document.querySelectorAll(".proj-grid");
+    let b = document.querySelectorAll(".proj-grid, .not-found");
     
     tabBtn.forEach((element)=>{
-      if (element == tabBtn[index]) {
-        element.classList.add("tabs-btn-active");
-      }
-      else{
-        element.classList.remove("tabs-btn-active");
-      }
+      element == tabBtn[index] ? element.classList.add("tabs-btn-active") : element.classList.remove("tabs-btn-active");
     })
 
     // Hiding other tab's project
     b.forEach((element)=>{
-      // element.style.display = "none";
       element.remove();
     })
-    // displaying projects
+    // displaying current tab projects
     projectTabs(projectsName[index]);
     // pagination();
     
@@ -225,79 +229,106 @@ expCard();
 
 let pagination = ()=> {
   let projectsNumbers = document.querySelectorAll(".proj-grid");
-  // let projectsNumbersDisplay = document.querySelectorAll(".tabs");
-  console.log(projectsNumbers.length)
+  console.log("projectsNumbers " +projectsNumbers.length)
 
   let projectsDisplay = 3;
 
-  let pageNumbers = Math.floor(projectsNumbers.length % projectsDisplay);
+  // let pageNumbers = Math.floor(projectsNumbers.length % projectsDisplay);
+  let pageNumbers = projectsNumbers.length % projectsDisplay;
   let copyPageNumbers = pageNumbers;
-  copyPageNumbers += 2;
-  console.log("pageNumbers " +copyPageNumbers);
+  copyPageNumbers<2 ? copyPageNumbers += 2 : copyPageNumbers += 1
+  // copyPageNumbers += 1
+  console.log("pageNumbers " +pageNumbers);
+  console.log("CopypageNumbers " +copyPageNumbers);
   
-    
-    let mainDiv = document.querySelector(".pagination-wrap")
-    
+  
+  let mainDiv = document.querySelector(".pagination-wrap")
+  
     for (let index = 0; index <= copyPageNumbers; index++) {
       if (index == 0 || index == copyPageNumbers) {
         let buttonClass = document.createElement("button");
         buttonClass.classList.add("page-btn", "page-bn-navigator");
         buttonClass.innerHTML = `${index == 0 ? '&laquo;' : '&raquo;'}`;
         mainDiv.appendChild(buttonClass);
-        buttonClass.addEventListener("click",(e)=>{
-          console.log(e.target)
-        })
       }
       else{
         let buttonClass = document.createElement("button");
         buttonClass.classList.add("page-btn");
         buttonClass.innerHTML = `${index}`;
         mainDiv.appendChild(buttonClass);
-        buttonClass.addEventListener("click",(e)=>{
-          console.log(e.target)
-        })
       }
     }
     
-    let btnNumbers = Math.floor(projectsNumbers.length / projectsDisplay);
-    console.log("btnNumbers " +btnNumbers)
-    let c = document.querySelectorAll(".page-btn");
-    console.log(c.length)
-    if (btnNumbers == 0) {
-      c.forEach((element)=>{
-        element.remove();
-      })
-    }   
+      let clickBtn = document.querySelectorAll(".page-btn") 
+
+      for (let index = 0; index < clickBtn.length; index++) {
+        clickBtn[index].addEventListener("click",(e)=>{
+          e.preventDefault();
+          clickBtn.forEach((element)=>{
+            element == clickBtn[index] ? element.classList.add("btn-active") : element.classList.remove("btn-active")
+          })
+        })
+      }
+    
+      // Removes Pagination from project tab which has 3 or less projects
+      
+      // let btnNumbers = Math.floor(projectsNumbers.length % projectsDisplay);
+      let btnNumbers = projectsNumbers.length;
+      console.log("btnNumbers " +btnNumbers)
+      // if (btnNumbers == 0) {
+        if (btnNumbers <= 3) {
+          let c = document.querySelectorAll(".page-btn");
+          console.log("Page Buttons " +c.length)
+          c.forEach((element)=>{
+            element.remove();
+          })
+          
+          // Removes Pagination for "No data Found"
+          if (btnNumbers == 0) {
+            let proj = document.querySelector(".tabs");
+            let spanTag = document.createElement("span");
+            spanTag.className = "not-found";
+            spanTag.innerHTML = "No Data Found";
+            proj.appendChild(spanTag)
+          }
+          // END Removes Pagination for "No data Found"
+        }   
+        console.log("------------------------------------------------------------")
+
+      // END Removes from project tab which has 3 or less projects
 }
 
 // pagination END
 
 let projectTabs = (projects) => {
+  
   let proj = document.querySelector(".tabs");
-
-  projects.map((projData) => {
-    let divClass = document.createElement("div");
-    divClass.classList.add("proj-grid", "wrapper-design");
-    divClass.innerHTML = `<div class="projGrid-column1 ">
-      <a target="_blank" href="${projData.projhRef}">
-      <img loading="lazy" class="proj-img" src="${projData.projSrc}" alt="${projData.projAlt}"/>
-      </a>
-    </div>
-    <div class="projGrid-column2 ">
-      <span class="proj-heading">${projData.projHeading}</span>
-      <span class="proj-desc">${projData.projDesc}</span>
-      <div class="proj-links-wrapper">
-        <div class="links-div1">
-          <a target="_blank" class="proj-link" href="${projData.projDemo}">Demo</a>
-        </div>
-        <div class="links-div2">
-          <a target="_blank" class="git-link" href="${projData.projCode}">Code</a>
-        </div>
+  
+  // if (projects.length != 0) {
+    projects.map((projData) => {
+      let divClass = document.createElement("div");
+      divClass.classList.add("proj-grid", "wrapper-design");
+      divClass.innerHTML = `<div class="projGrid-column1 ">
+        <a target="_blank" href="${projData.projhRef}">
+        <img loading="lazy" class="proj-img" src="${projData.projSrc}" alt="${projData.projAlt}"/>
+        </a>
       </div>
-    </div>`;
-    proj.appendChild(divClass);
-  });
-  // pagination()
+      <div class="projGrid-column2 ">
+        <span class="proj-heading">${projData.projHeading}</span>
+        <span class="proj-desc">${projData.projDesc}</span>
+        <div class="proj-links-wrapper">
+          <div class="links-div1">
+            <a target="_blank" class="proj-link" href="${projData.projDemo}">Demo</a>
+          </div>
+          <div class="links-div2">
+            <a target="_blank" class="git-link" href="${projData.projCode}">Code</a>
+          </div>
+        </div>
+      </div>`;
+      proj.appendChild(divClass);
+    });
+ 
+  pagination()
 };
 
 projectTabs(htmlProjects);
