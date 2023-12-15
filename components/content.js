@@ -145,22 +145,13 @@ let javacriptProjects = [
     projCode: "https://github.com/WaniGaurav/edie-homepage-devChallenges",
   },
 ]
-let reactProjects = [
-  {
-    projhRef: "./components/images/proj-images/edie/edie-merged-old.png",
-    projSrc: "./components/images/proj-images/edie/edie-merged.png",
-    projAlt: "Edie homepage",
-    projHeading: "Edie homepage",
-    projDesc:"In this project, I work with CSS: GRID and FLEXBOX to create card and gallery layouts, and I also use JAVASCRIPT for creating dynamic content.",
-    projDemo: "https://edie-homepage-devchallenges-gw.netlify.app/",
-    projCode: "https://github.com/WaniGaurav/edie-homepage-devChallenges",
-  },
-]
+let reactProjects = []
 
 // projects section
 let tabBtn = document.querySelectorAll(".tab-btn");
 // console.log(tabBtn.length)
-let projectsName = [htmlProjects, javacriptProjects, reactProjects]
+// let projectsName = [htmlProjects, javacriptProjects, reactProjects]
+let projectsName = [htmlProjects, javacriptProjects]
 
 for (let index = 0; index < tabBtn.length; index++) {
   tabBtn[index].addEventListener("click",(e)=>{
