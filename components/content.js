@@ -328,7 +328,7 @@ let projectTabs = (projects) => {
       proj.appendChild(divClass);
     });
  
-  pagination()
+  // pagination()
 };
 
 projectTabs(htmlProjects);
