@@ -25,7 +25,8 @@
 .darkDiv{
     width:min(100%, 1046px);
     margin: 1rem auto;
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
 }
 .dark{
     cursor: pointer;
@@ -40,6 +41,28 @@
     transition-duration: .15s;
 }
 .dark:hover{
+    color: #f2f2f2;
+    background: rgb(219, 57, 45);
+}
+.resume-btn{
+    text-align: center;
+    text-decoration: none;
+    width: 5.3rem;
+    height: 3rem;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size:0.8rem;
+    border: 2px solid black;
+    border-radius: 8px;
+    color: #f2f2f2;
+    background: #6d0ab4;
+    padding: 0.8rem;
+    text-align:center;
+    transition-duration: .15s;
+
+}
+.resume-btn:hover{
     color: #f2f2f2;
     background: rgb(219, 57, 45);
 }
@@ -555,6 +578,7 @@ section{
         margin: 1rem 1.5rem;
         justify-items: center;
     }
+    .resume-btn,
     .tabs-wrap > span,button{
         margin: 2rem 0 0 0;
     }
