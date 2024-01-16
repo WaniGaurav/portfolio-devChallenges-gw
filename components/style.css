@@ -30,6 +30,7 @@
 }
 .dark{
     cursor: pointer;
+    height:3rem;
     font-family: Poppins;
     font-weight: 500;
     font-size:0.8rem;
@@ -579,6 +580,7 @@ section{
         justify-items: center;
     }
     .resume-btn,
+    .dark,
     .tabs-wrap > * {
         margin: 2rem 0 0 0;
     }
