@@ -579,11 +579,8 @@ section{
         justify-items: center;
     }
     .resume-btn,
-    .tabs-wrap > span,button{
+    .tabs-wrap > * {
         margin: 2rem 0 0 0;
-    }
-    .darkDiv > button{
-        margin: 0;
     }
     .proj-grid{
         display: flex;
