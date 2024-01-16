@@ -579,7 +579,8 @@ section{
         justify-items: center;
     }
     .resume-btn,
-    .tabs-wrap > span,button{
+    .tabs-wrap > span,
+    .tabs-wrap > button{
         margin: 2rem 0 0 0;
     }
     .proj-grid{
