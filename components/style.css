@@ -634,9 +634,9 @@ section{
     .darkDiv{
         text-align: end;
     }
-    .dark{
+/*     .dark{
         margin: 0;
-    }
+    } */
     .intro-section{
         padding: 2rem 0 0 0;
         height: 50rem;
