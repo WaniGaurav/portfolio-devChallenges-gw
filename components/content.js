@@ -145,7 +145,17 @@ let javacriptProjects = [
     projCode: "https://github.com/WaniGaurav/edie-homepage-devChallenges",
   },
 ]
-let reactProjects = []
+let reactProjects = [
+  {
+    projhRef: "./components/images/proj-images/edie/edie-merged-old.png",
+    projSrc: "./components/images/proj-images/edie/edie-merged.png",
+    projAlt: "Button Component",
+    projHeading: "Button Component",
+    projDesc:"In this project, I work with React-js to create button (click to copy css) reusable components and style it using css as well as usues CSS: GRID and FLEXBOX to create responsive layouts.",
+    projDemo: "https://button-component-react-devch-gw.netlify.app/",
+    projCode: "https://github.com/WaniGaurav/button-component-react-devch",
+  },
+]
 
 // projects section
 let tabBtn = document.querySelectorAll(".tab-btn");
