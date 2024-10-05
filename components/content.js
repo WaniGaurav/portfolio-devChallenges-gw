@@ -147,8 +147,8 @@ let javacriptProjects = [
 ]
 let reactProjects = [
   {
-    projhRef: "./components/images/proj-images/edie/edie-merged-old.png",
-    projSrc: "./components/images/proj-images/edie/edie-merged.png",
+    projhRef: "./components/images/proj-images/botton-component/button-component-desktop.png",
+    projSrc: "./components/images/proj-images/botton-component/button-component-desktop.png",
     projAlt: "Button Component",
     projHeading: "Button Component",
     projDesc:"In this project, I work with React-js to create button (click to copy css) reusable components and style it using css as well as usues CSS: GRID and FLEXBOX to create responsive layouts.",
