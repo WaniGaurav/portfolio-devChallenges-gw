@@ -108,6 +108,15 @@ let htmlProjects = [
 let javacriptProjects = [
 
   {
+    projhRef: "./components/images/proj-images/the-picture-gallery/deskop-view-dark.png",
+    projSrc: "./components/images/proj-images/the-picture-gallery/deskop-view-dark.png",
+    projAlt: "The picture gallery",
+    projHeading: "The picture gallery",
+    projDesc:"In this project, I work with Javascript <strong>Fetch API</strong> for fetch images as per user's input and CSS: GRID, and FLEXBOX to create layouts, collapsed navigation, and make the page responsive.",
+    projDemo: "https://picture-gallery-gw.netlify.app/",
+    projCode: "https://github.com/WaniGaurav/acumen-asmnt-gw",
+  },
+  {
     projhRef: "./components/images/proj-images/interior/interior-merged-old.png",
     projSrc: "./components/images/proj-images/interior/interior-merged.png",
     projAlt: "Interior Consultant page",
@@ -147,11 +156,20 @@ let javacriptProjects = [
 ]
 let reactProjects = [
   {
+    projhRef: "./components/images/proj-images/password-generator/pswd-gertr.png",
+    projSrc: "./components/images/proj-images/password-generator/pswd-gertr.png",
+    projAlt: "Password Generator",
+    projHeading: "Password Generator",
+    projDesc:"In this project, I work with <strong>Tailwind-CSS</strong> and React-js to create complex password generator as per user's need.I added dynamic functionality using react hooks like <strong>useCallback, UseRef, useEffect.</strong>",
+    projDemo: "https://password-generator-rect-gw.netlify.app/",
+    projCode: "https://github.com/WaniGaurav/react-pswd-generator",
+  },
+  {
     projhRef: "./components/images/proj-images/botton-component/button-component-desktop.png",
     projSrc: "./components/images/proj-images/botton-component/button-component-desktop.png",
     projAlt: "Button Component",
     projHeading: "Button Component",
-    projDesc:"In this project, I work with React-js to create button (click to copy css) reusable components and style it using css as well as usues CSS: GRID and FLEXBOX to create responsive layouts.",
+    projDesc:"In this project, I work with React-js to create button <strong>(click to copy css)</strong> reusable components and style it using css as well as usues CSS: GRID and FLEXBOX to create responsive layouts.",
     projDemo: "https://button-component-react-devch-gw.netlify.app/",
     projCode: "https://github.com/WaniGaurav/button-component-react-devch",
   },
