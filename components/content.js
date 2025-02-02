@@ -156,6 +156,15 @@ let javacriptProjects = [
 ]
 let reactProjects = [
   {
+    projhRef: "./components/images/proj-images/pdf-merger/pdf-merge.png",
+    projSrc: "./components/images/proj-images/pdf-merger/pdf-merge.png",
+    projAlt: "Pdf's Merger",
+    projHeading: "Pdf's Merger",
+    projDesc:"In this project, I work with Bootstrap and React-js to create <strong>pdf merger website which offers user to merge pdf's files without any size restriction.</strong>",
+    projDemo: "https://pdfs-merger-gw.netlify.app/",
+    projCode: "https://github.com/WaniGaurav/pdf-merger",
+  },
+  {
     projhRef: "./components/images/proj-images/password-generator/pswd-gertr.png",
     projSrc: "./components/images/proj-images/password-generator/pswd-gertr.png",
     projAlt: "Password Generator",
