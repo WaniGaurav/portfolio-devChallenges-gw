@@ -211,6 +211,8 @@ for (let index = 0; index < tabBtn.length; index++) {
     b.forEach((element)=>{
       element.remove();
     })
+
+    pageIndex = 0;
     // displaying current tab projects
     projectTabs(projectsName[index]);
     
