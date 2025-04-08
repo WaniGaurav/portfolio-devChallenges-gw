@@ -187,7 +187,7 @@ let reactProjects = [
 // projects section
 let tabBtn = document.querySelectorAll(".tab-btn");
 // //console.log(tabBtn.length)
-let projectsName = [htmlProjects, javacriptProjects, reactProjects]
+let projectsName = [reactProjects, javacriptProjects, htmlProjects]
 // let projectsName = [htmlProjects, javacriptProjects]
 
 let pageIndex = 0;
@@ -369,4 +369,4 @@ let projectTabs = (projects) => {
 
 // Projects end
 
-projectTabs(htmlProjects);
+projectTabs(reactProjects);
