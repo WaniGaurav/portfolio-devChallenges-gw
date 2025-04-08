@@ -74,6 +74,13 @@ let experiance = [
     roleName: "Web Developer",
     roleDesc:"Created AEM components and templates. Design and maintain scalable and stable web solutions that meet business needs."
   },
+  {
+    logosrc: "",
+    logoAltTxt: "Freelancing",
+    expDate: "Jan 2021 -",
+    roleName: "Web Developer",
+    roleDesc:"- Migrated legacy code to modern JavaScript ES6 in Dreamweaver, improving functionality and maintainability.<br>- Tackled challenges like enhancing site speed and ensuring mobile compatibility, using HTML, CSS, and JavaScript for responsive, user-friendly design.<br>- Optimized SEO elements (meta tags, headers, internal links) and improved content to boost search visibility and user engagement.<br>- Leveraged Google Analytics to track traffic, assess performance, and refine SEO strategies.<br>- Collaborated through Git for version control and used JIRA/Workfront to manage projects and ensure timely delivery.<br>"
+  },
 ];
 
 let htmlProjects = [
