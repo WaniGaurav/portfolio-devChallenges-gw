@@ -119,7 +119,7 @@ let javacriptProjects = [
     projSrc: "./components/images/proj-images/recipe/recipe-api.png",
     projAlt: "Recipe Site",
     projHeading: "Recipe Site",
-    projDesc:"In this project, I work with CSS: GRID and FLEXBOX to create layouts and make pages responsive, and I also use JAVASCRIPT for creating dynamic content.",
+    projDesc:"In this project, I work with CSS: GRID and FLEXBOX to create layouts and make pages responsive, and I also use JAVASCRIPT for creating dynamic content through fetch api call and used Sponcular API for data.",
     projDemo: "https://recipe-api-gw.netlify.app/",
     projCode: "https://github.com/WaniGaurav/recipe-page-api-spon",
   },
