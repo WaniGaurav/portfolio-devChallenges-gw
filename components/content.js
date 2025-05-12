@@ -133,6 +133,15 @@ let javacriptProjects = [
     projCode: "https://github.com/WaniGaurav/acumen-asmnt-gw",
   },
   {
+    projhRef: "./components/images/proj-images/price-card/price-card-img.png",
+    projSrc: "./components/images/proj-images/price-card/price-card-img.png",
+    projAlt: "Price card page",
+    projHeading: "Price card",
+    projDesc:"In this project, I work with HTML, CSS: GRID, and FLEXBOX to create layouts, accordien, and make the page responsive.",
+    projDemo: "https://price-card-prvwy-gw.netlify.app/",
+    projCode: "https://github.com/WaniGaurav/provwy-asmnt-price-crd",
+  },
+  {
     projhRef: "./components/images/proj-images/interior/interior-merged-old.png",
     projSrc: "./components/images/proj-images/interior/interior-merged.png",
     projAlt: "Interior Consultant page",
