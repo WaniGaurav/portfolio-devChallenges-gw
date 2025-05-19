@@ -115,6 +115,15 @@ let htmlProjects = [
 let javacriptProjects = [
 
   {
+    projhRef: "./components/images/proj-images/eScan/escan-wp.png",
+    projSrc: "./components/images/proj-images/eScan/escan-wp.png",
+    projAlt: "Recipe Site",
+    projHeading: "Recipe Site",
+    projDesc:"In this project, I work with CSS and <strong>Bootstrap5</strong> create layouts and make pages responsive, and I also use JAVASCRIPT for creating dynamic content.",
+    projDemo: "https://escaan-gw.netlify.app/",
+    projCode: "https://github.com/WaniGaurav/escan-asmnt",
+  },
+  {
     projhRef: "./components/images/proj-images/recipe/recipe-api.png",
     projSrc: "./components/images/proj-images/recipe/recipe-api.png",
     projAlt: "Recipe Site",
