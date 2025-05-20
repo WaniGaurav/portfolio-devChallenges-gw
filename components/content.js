@@ -115,6 +115,15 @@ let htmlProjects = [
 let javacriptProjects = [
 
   {
+    projhRef: "./components/images/proj-images/link-share-js/link-share.png",
+    projSrc: "./components/images/proj-images/link-share-js/link-share.png",
+    projAlt: "Link Share",
+    projHeading: "Link share",
+    projDesc:"Link sharing is a simple and user-friendly web tool for saving, categorizing, and managing your favorite links. It helps you stay organized and quickly access content across work, news, hobbies, or any custom category.",
+    projDemo: "https://link-share-js-gw.netlify.app/",
+    projCode: "https://github.com/WaniGaurav/link-share-js",
+  },
+  {
     projhRef: "./components/images/proj-images/eScan/escan-wp.png",
     projSrc: "./components/images/proj-images/eScan/escan-wp.png",
     projAlt: "Escan Proj",
